@@ -21,12 +21,12 @@ a:hover{
 /*HEADER*/
 header{
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
-    justify-content: space-between;/*Cria um espaçamento entre os elementos. - Alinhamento Horizontal*/
-    align-items: center;/*Alinhando os itens ao centro*/
+    justify-content: space-between;
+    align-items: center;
     padding: 20px 50px;
     background-color: #fff;
 }
@@ -42,10 +42,10 @@ header li a{
 header li{
     margin: 0 15px;
 }
-header li:first-child{/*Primeiro filho - primeiro elemento de li, removendo a margin-esquerda*/
+header li:first-child{
     margin-left: 0;
 }
-header li:last-child{/*Último filho - Último elemento de li, removendo a margin-direita*/
+header li:last-child{
     margin-right: 0;
 }
 
@@ -83,8 +83,25 @@ header li:last-child{/*Último filho - Último elemento de li, removendo a margi
     border-radius: 4px;
     color: #191c03;
     padding: 20px 50px;
-    text-transform: uppercase;/*Deixando o texto em maiúsculo*/
+    text-transform: uppercase;
 }
+/* link para whatsapp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.whatsapp-icon img:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+  
 
 @media (max-width: 700px){
     .hero h1{
@@ -97,7 +114,6 @@ header li:last-child{/*Último filho - Último elemento de li, removendo a margi
 
 
 /*CONHEÇA O HOTEL*/
-
 section.conheca-o-hotel{
     display: flex;
     flex-direction: column;
@@ -123,7 +139,6 @@ section.conheca-o-hotel hr{
     margin-bottom: 70px;
     border: none;
 }
-
 section.conheca-o-hotel .grid{
     width: 100%;
     display: flex;
@@ -151,7 +166,6 @@ section.conheca-o-hotel .grid li.large {
 
 
 /* CARACTERÍSTICAS */
-
 section.caracteristicas{
     background-color: #191c03;
     display: flex;
@@ -178,7 +192,6 @@ section.caracteristicas hr{
     margin-bottom: 70px;
     border: none;
 }
-
 section.caracteristicas .grid{
     width: 100%;
     display: flex;
@@ -195,7 +208,6 @@ section.caracteristicas .grid li h4{
 section.caracteristicas .grid li p{
     color: #fff;
 }
-
 @media (max-width: 850px){
     section.caracteristicas .grid{
         flex-direction: column;
@@ -228,7 +240,6 @@ section.newslatter hr{
     margin-bottom: 70px;
     border: none;
 }
-
 section.newslatter form{
     display: flex;
     align-items: center;
@@ -263,7 +274,6 @@ section.newslatter button{
 
 
 /* FOOTER */
-
 footer{
     display: flex;
     flex-direction: column;
@@ -288,4 +298,11 @@ footer ul li a{
 footer p{
     color: #c3c63b;
     text-align: center;
+}
+footer .creditos {
+    margin: 2px;
+}
+footer .creditos a {
+    padding: 2px;
+    color: white;
 }

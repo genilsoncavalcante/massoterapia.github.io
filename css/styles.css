@@ -2,93 +2,44 @@
     background-color: #ccc;
     height: 500px;
     display: flex;
-    flex-direction: row;/*Direção do flex com valor 'column' - Define em colunas, um abaixo do outro, posicionado na direita.*/
-
-/*  flex-direction: row; - Define como em linha - padrão.
-
-    flex-direction: row-reverse; - Define como ordem reversa em linha.
-
-    flex-direction: column-reverse; - Define como ordem reversa em colunas.
-*/
-
-    flex-wrap: nowrap;/*Define se os itens vão ter quebra de linha ou não.nowrap - valor padrão onde não permite quebra de linha.
-    
-    flex-wrap: wrap; - Define uma quebra de linha entre os elementos.
-
-    flex-wrap: wrap-reverse; - Define uma quebra de linha reversa.
-    */
-
-    flex-flow: wrap;/*Define a direçao do flex e tambem a quebra de linha ao mesmo tempo. É uma forma resumida de falar sobre o flex-direction e o flex-wrap*/
-
-    /*justify-content: space-around;/*O 'justify-content' Faz um alinhamento horizontal dos elementos. OBS: Ele faz apenas um alinhamento, não altera as ordens dos itens.
-
-    com o valor: 'flex-start' ele alinha da esquerda para a direita.
-
-    com o valor: 'flex-end' ele alinha da direita para a esquerda.
-
-    com o valor: 'center' ele alinha ao centro.
-
-    com o valor: 'space-between' ele cria um espaçamento entre os itens.
-
-    com o valor: 'space-around' ele cria um espaçamento distribuido igualmente entre os itens, inclusive nas estremidades.
-    */
-
-    align-items: stretch;/*o 'align-items' define o alinhamento vertical.
-    
-    Com o valor: 'stretch' - Valor padrão - Define que os itens cresçam igualmente.
-
-    com o valor: 'flex-start' - Define que o alinhamento seja feito ao topo.
-    
-    Com o valor: 'flex-end' - Define que o alinhamento seja feito na base de um container.
-
-    Com o valor: 'center' - Define que o alinhamento ao centro.
-
-    Temos ainda o valor 'baseline' - Define um alinhamento relacionado ao conteúdo do elemento em questão.
-    */
-
-    align-content: flex-start;/*Faz-se uma alinhamento vertical quando os itens estiverem em 'multiline', ou seja, quando os itens estiverem com uma quebra.
-    VALORES:
-    flex-start - Alinhamento vertical
-
-    flex-end - Alinhamento na base.
-
-    center - Alinhamento no centro.
-
-    space-between - Espaçamento entre os itens.
-
-    space-around - Espaçamento entre os itens, mas tambem com espaçamento entre as estremidades.
-
-    stretch - Valor padrão, onde faz os elementos crescerem igualmente na vertical.
-    
-    
-    */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+    flex-flow: wrap;
+    align-items: stretch;
+    align-content: flex-start;
 }
+
 .item{
     background-color: #333;
     color: #fff;
     padding: 20px;
     margin: 5px;
     height: 30px;
-
-    flex-grow: 1;/*O 'flex-grow' é uma propriedade usada para definir a distribuição da largura dos elementos. Com o valor 0, é definido como padrão, valor 1 - é como eu estivesse determinando a largura igualmente distribuida para todos os elementos, se eu especificar em apenas um elemento com um 'flex-grow: 2;' eu estou dizendo que tal elemento vai possuir uma largura de duas vezes mais com relação ao outro elemento.*/
-
-    flex-shrink: 1;/*Determina um tamanho menor dos itens*/
-    flex-basis: 300px;/*Largura inicial dos itens*/
-
-    flex: 1 1 300px;/*Essa é a forma resumida de escrever as três propriedades, a flex-grow, flex-shrink, e a flex-basis.*/
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 300px;
+    flex: 1 1 300px;
 }
 
 .article-01 {
     padding-top: 40px;
-
 }
 
-/*
-O 'order' serve para indicar a ordem do posicionamentos dos elementos.
+.article-01{
+    order: 3; 
+    flex-shrink: 3;
+}
 
-O 'align-self: flex-end;' - Serve para determinar o alinhamento de um elemento em específico. 
-*/
-.article-01{order: 3; /*flex-grow: 2;*/ flex-shrink: 3;}
-.article-02{order: 1; align-self: auto;}
-.article-03{order: 2;}
-.article-04{order: 4;}
+.article-02{
+    order: 1; 
+    align-self: auto;
+}
+
+.article-03{
+    order: 2;
+}
+.article-04{
+    order: 4;
+}
